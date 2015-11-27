@@ -1,0 +1,134 @@
+/*********************************************
+GENERAL
+*********************************************/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F2E274;
+    font-family: 'Raleway', sans-serif;
+}
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: solid;
+    border-width: 1px;
+    width: 50%;
+}
+
+/*********************************************
+HEADING
+*********************************************/
+
+header div#mast-head {
+    font-family: 'Righteous', sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+}
+
+/*********************************************
+MAIN CONTAINER
+*********************************************/
+
+section#main-container,
+section#intro,
+section#result {
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 30rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 0.3rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+section#intro {
+    text-align: center;
+}
+
+div.q1 {
+  text-align: center;
+}
+
+div.q1 form {
+  text-align: left;
+}
+
+.q1 h2,
+.q1 form {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.q1 input {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+section#result {
+  text-align: center;
+} 
+
+#questionNum {
+  margin-top: 20px;
+}
+
+
+/*********************************************
+BUTTON
+*********************************************/
+
+#result-btn,
+#start-btn,
+#result button {
+    margin-top: 20px;
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+    background: -moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background: -webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background: -o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background: -ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
+    background-color: #ffffff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #666666;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    
+    
+}
+#result-btn:hover,
+#start-btn:hover,
+#result button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+    background: -moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+    background: -o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+    background: -ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+    background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff', GradientType=0);
+    background-color: #f6f6f6;
+}
+#result-btn:active,
+#start-btn:active,
+#result button:active {
+    position: relative;
+    top: 1px;
+}
+
+
