@@ -18,8 +18,8 @@ $(document).ready(function() {
     },
     //question 3
     {
-      question: "What is the most famous korea's food?",
-      choices: ['Korean-BBQ', 'Kimchi', 'bulgogi', 'rice-cake'],
+      question: "North Korea and South Korea are same country? ?",
+      choices: ['True', 'False'],
       correct: 1
 
     },
@@ -35,6 +35,41 @@ $(document).ready(function() {
       question: "Which continent South Korea located in ?",
       choices: ['Asia', 'Europe', 'America', 'Africa'],
       correct: 0
+
+    },
+    //question 6
+    {
+      question: "What year the South Korea gained independence from Japan?",
+      choices: ['1950', '1960', '1963', '1945'],
+      correct: 3
+
+    },
+    //question 7
+    {
+      question: "Who created Korean language called 'Hangul'?",
+      choices: ['Sejong', 'Gojong', 'Taejong', 'JeongJo'],
+      correct: 0
+
+    },
+    //question 8
+    {
+      question: "How to say 'Hello' in Korean?",
+      choices: ['An Nyung', 'Jalga', 'Sa rang hae yo', 'Go ma wuh yo'],
+      correct: 0
+
+    },
+    //question 9
+    {
+      question: "Who is the most famous soccer player in Korea? ",
+      choices: ['Cha Bum Keun', 'Ahn Jung Hwan', 'Ji sung Park', 'Lee Dong Kuk'],
+      correct: 2
+
+    },
+    //question 10
+    {
+      question: "What is Korea Currency?",
+      choices: ['Dollar', 'Euro', 'Won', 'Yen'],
+      correct: 2
 
     }
   ];
@@ -60,24 +95,31 @@ $(document).ready(function() {
   });
   
   $('#result-btn').click(function(){
-    quizGenerator(currentQuestion);
+
+    var answer = $("input[id='option']:checked").val();
+      console.log(answer);
+    if (answer == undefined) {
+      alert('Please select the answer!');
+    } else {
+      quizGenerator(currentQuestion);
+      
+    }
+
   });
   
 
   //Validate the answer
-  $('#main-container').on('click', '#option', function(){
-      
+  $(document).on('click', '#option', function(){
+
       var answer = $("input[id='option']:checked").val();
       var correctAnswer = questions[(currentQuestion -1)].correct;
       console.log("Your Answer is: " + answer);
       console.log("Correct Answer is: " + correctAnswer);
       if (answer == correctAnswer){
+      
         correctTotal++;
       }
   });
-  
-  
-  
   
   
   //Show the intro page and start button
@@ -86,21 +128,6 @@ $(document).ready(function() {
     $('#result').hide();
     $('#main-container').show();
   }
-
-
-
-  // //show the questions and options
-  // function quiz() {
-  //   $('#question').
-  // }
-
-  //question counter
-  function quizCounter() {
-
-  }
-
-
-
 
 
   //Score tracker
@@ -116,6 +143,17 @@ $(document).ready(function() {
     $('#main-container').hide();
     $('#result').show();
     $('#result h2').text("Your Score is " + correctTotal + " Out of " + questionTotal);
+    
+    //Feedback depends on how many questions got right by User
+    if ( correctTotal >= 8 ) { 
+      $('#result').append("<p>Great Job!! You almost got every questions!!</p>");
+    } else if ( correctTotal >= 5 && correctTotal < 8 ){
+      $('#result').append("<p>Nice Job!! You got quite a few questions!!</p>");
+    } else if ( correctTotal > 0 && correctTotal < 5 ){
+      $('#result').append("<p>Nice Try!! Lets study more about Korea!!</p>");
+    } else {
+      $('#result').append("<p>Come On!! You did not answer anything!! </p>");
+    }
   }
 
   //display quiz container

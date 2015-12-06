@@ -77,6 +77,13 @@ section#result {
 }
 
 
+section#result p {
+  font-size: 1.5em;
+  margin-top: 1em;
+  color: #e65070;
+}
+
+
 /*********************************************
 BUTTON
 *********************************************/
